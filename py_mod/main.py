@@ -9,7 +9,4 @@ from py_mod.create import create
 def main(argv: Sequence[str] | None = None) -> int:
     args = parse_args(argv)
 
-    if args.command == 'create':
-        return create(module=args.module)
-
-    return 0
+    return create(module=args.module, runnin_main=args.running_main)
